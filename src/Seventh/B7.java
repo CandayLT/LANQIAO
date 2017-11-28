@@ -13,11 +13,11 @@ package Seventh;
 //        注意：你提交的应该是一个整数，不要填写任何多余的内容或说明性文字。
 
 public class B7 {
-    private static int count = 0;
+    public static int count = 0;
     static boolean[] isVisit = new boolean[13];
     static int[] outputArray = new int[5];
 
-    static void dfs(int n) {
+    public static void dfs(int n) {
         if (n == 5) { //通过DFS获得五个数的全排列
             if (judge()) {
                 count++;
