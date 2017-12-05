@@ -1,3 +1,4 @@
+import Seventh.B10;
 import Seventh.B2;
 import Seventh.B7;
 import Seventh.B8;
@@ -10,7 +11,7 @@ public class Main {
         B7.dfs(0);
         System.out.println("B7 answer is " + B7.count);
         System.out.println("B2 answer is " + B2.main());
-        System.out.println("B8 answer is ");
-        B8.solution(773535);
+        System.out.print("B8 answer is "); B8.solution(773535);
+        System.out.print("B10 answer is "); B10.input();
     }
 }
