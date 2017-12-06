@@ -14,11 +14,12 @@ package Eighth;
  */
 public class B7 {
     public static void main() {
-        String date = "99/03/04";
+        String date = "02/03/04";
         String[] d = date.split("/");
         judge1(new String[]{d[0], d[1], d[2]});
         judge1(new String[]{d[2], d[1], d[0]});
         judge1(new String[]{d[2], d[0], d[1]});
+        System.out.println();
     }
 
     public static void judge1(String[] d) {
@@ -60,7 +61,7 @@ public class B7 {
         }
 
         tmp += "-" + (data[1] < 10 ? "0" + data[1] : data[1]) + "-" + (data[2] < 10 ? "0" + data[2] : data[2]);
-        System.out.println(tmp);
+        System.out.print(tmp + ", ");
     }
 
     public static boolean isThirtyDay(int month) {
