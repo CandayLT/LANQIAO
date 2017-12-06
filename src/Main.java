@@ -1,3 +1,5 @@
+import Eighth.B5;
+import Eighth.B9;
 import Seventh.B10;
 import Seventh.B2;
 import Seventh.B7;
@@ -13,5 +15,9 @@ public class Main {
         System.out.println("B2 answer is " + B2.main());
         System.out.print("B8 answer is "); B8.solution(773535);
         System.out.print("B10 answer is "); B10.input();
+        System.out.print("B2 answer is ");Eighth.B2.solve();
+        System.out.print("B5 answer is ");B5.main();
+        Eighth.B10.main();
+        System.out.print("B9 answer is " + B9.main());
     }
 }

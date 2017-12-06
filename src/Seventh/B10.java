@@ -64,6 +64,7 @@ public class B10 {
         for (int i: tmp) {
             System.out.print(i + " ");
         }
+        System.out.println();
     }
 
     private static int search(int[] inputs, int j, int i) {
