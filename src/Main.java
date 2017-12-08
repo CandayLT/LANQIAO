@@ -14,16 +14,22 @@ public class Main {
         System.out.println("B2 answer is " + B2.main());
         B7.dfs(0);
         System.out.println("B7 answer is " + B7.count);
-        System.out.print("B8 answer is "); B8.solution(773535);
-        System.out.print("B10 answer is "); B10.input();
+        System.out.print("B8 answer is ");
+        B8.solution(773535);
+        System.out.print("B10 answer is ");
+        B10.input();
         System.out.println("------------------------------");
-        System.out.print("B2 answer is ");Eighth.B2.solve();
-        System.out.print("B3 answer is ");B3.main();
-        System.out.print("B5 answer is ");B5.main();
-        System.out.print("B7 answer is ");Eighth.B7.main();
+        System.out.print("B2 answer is ");
+        Eighth.B2.solve();
+        System.out.print("B3 answer is ");
+        B3.main();
+        System.out.print("B5 answer is ");
+        B5.main();
+        System.out.print("B6 answer is ");Eighth.B6.main();
+        System.out.print("B7 answer is ");
+        Eighth.B7.main();
         System.out.print("B9 answer is " + B9.main());
         System.out.println();
         Eighth.B10.main();
-
     }
 }

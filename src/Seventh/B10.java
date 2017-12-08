@@ -61,18 +61,15 @@ public class B10 {
             tmpMap.put(inputs[i], i);
         }
 
-        for (int i: tmp) {
+        for (int i: tmp)
             System.out.print(i + " ");
-        }
         System.out.println();
     }
 
     private static int search(int[] inputs, int j, int i) {
-        j += 1;
         Set<Integer> classify = new HashSet<>();
-        for (; j < i; j++)
+        for (j += 1; j < i; j++)
             classify.add(inputs[j]);
-
         return classify.size();
     }
 }
