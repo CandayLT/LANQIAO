@@ -1,3 +1,4 @@
+import Eighth.B11;
 import Eighth.B3;
 import Eighth.B5;
 import Eighth.B9;
@@ -31,5 +32,6 @@ public class Main {
         System.out.print("B9 answer is " + B9.main());
         System.out.println();
         Eighth.B10.main();
+        B11.main();
     }
 }
