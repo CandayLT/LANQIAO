@@ -9,27 +9,34 @@ package Eighth;
 // 在走第x千米到第x+1千米这一千米中（x是整数），他花费的路费是x+10这么多。也就是说走1千米花费11，走2千米要花费23。
 //        J大臣想知道：他从某一个城市出发，中间不休息，到达另一个城市，所有可能花费的路费中最多是多少呢？
 
+import java.util.Scanner;
+
 /**
  * Created by TangChen on 17/12/10.
  */
 public class B11 {
     static boolean[] isVisit;
     static int[][] input;
-    static int max = 0;
-    static int N = 5;
+    static int max;
+    static int N;
 
     public static void main() {
+        Scanner scanner = new Scanner(System.in);
+        N = scanner.nextInt();
+        int x, y, value;
+        isVisit = new boolean[N+1];
         input = new int[N + 1][N + 1];
-        input[1][2] = input[2][1] = 2;
-        input[1][3] = input[3][1] = 1;
-        input[2][4] = input[4][2] = 5;
-        input[2][5] = input[5][2] = 4;
-
-        for(int i = 1; i < N + 1; i++) {
-            isVisit = new boolean[N+1];
-            dfs(0, i);
+        for (int i = 0; i < N - 1; i++) {
+            x = scanner.nextInt();
+            y = scanner.nextInt();
+            value = scanner.nextInt();
+            input[x][y] = input[y][x] = value;
         }
-        System.out.println("最远路径：" + (max * 10 + max * (1 + max) / 2));
+
+        for(int i = 1; i < N + 1; i++)
+            dfs(0, i);
+
+        System.out.println((max * 10 + (max * (1 + max) / 2)));
 
     }
 
@@ -37,13 +44,16 @@ public class B11 {
         if(!isVisit[n]) {
             isVisit[n] = true;
 
-            max = s > max ? s : max;
+            if (s > max)
+                max = s;
 
             for (int i = 1; i < input[n].length; i++) {
                 if (input[n][i] != 0) {
                     dfs(s + input[n][i], i);
                 }
             }
+
+            isVisit[n] = false;
         }
     }
 }
