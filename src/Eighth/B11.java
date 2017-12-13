@@ -24,7 +24,7 @@ public class B11 {
         Scanner scanner = new Scanner(System.in);
         N = scanner.nextInt();
         int x, y, value;
-        isVisit = new boolean[N+1];
+        isVisit = new boolean[N + 1];
         input = new int[N + 1][N + 1];
         for (int i = 0; i < N - 1; i++) {
             x = scanner.nextInt();
@@ -33,24 +33,22 @@ public class B11 {
             input[x][y] = input[y][x] = value;
         }
 
-        for(int i = 1; i < N + 1; i++)
+        for (int i = 1; i < N + 1; i++)
             dfs(0, i);
 
         System.out.println((max * 10 + (max * (1 + max) / 2)));
-
     }
 
     static void dfs(int s, int n) {
-        if(!isVisit[n]) {
+        if (!isVisit[n]) {
             isVisit[n] = true;
 
             if (s > max)
                 max = s;
 
             for (int i = 1; i < input[n].length; i++) {
-                if (input[n][i] != 0) {
+                if (input[n][i] != 0)
                     dfs(s + input[n][i], i);
-                }
             }
 
             isVisit[n] = false;

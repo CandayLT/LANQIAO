@@ -1,10 +1,5 @@
 package Eighth;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-
 /**
  * Created by TangChen on 17/12/5.
  */
@@ -12,11 +7,9 @@ public class B2 {
     static int[] a = new int[9];
     static boolean[] isVisit = new boolean[9];
     static int count = 0;
-    static Map<String, List<Integer>> map = new HashMap<>();
 
     public static void solve() {
         dfs(0);
-
         System.out.println(count / 6);
     }
 
@@ -45,9 +38,5 @@ public class B2 {
 
         return ax == bx && ax == cx;
 
-    }
-
-    private static int getN(int a, int b, int c, int d) {
-        return a * 1000 + b * 100 + c * 10 + d;
     }
 }

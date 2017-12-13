@@ -1,7 +1,4 @@
-import Eighth.B11;
-import Eighth.B3;
-import Eighth.B5;
-import Eighth.B9;
+import Eighth.*;
 import Seventh.B10;
 import Seventh.B2;
 import Seventh.B7;
